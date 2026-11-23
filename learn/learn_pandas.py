@@ -1,4 +1,5 @@
 # I have done ml before but I have never actually learned pandas/tensorflow and followed guides. Im going to use the attached tutorials to actually learn this time.
+# https://www.kaggle.com/code/residentmario/creating-reading-and-writing/tutorial
 import pandas as pd
 
 # Table
@@ -17,3 +18,24 @@ print(reviews.shape)
 # .head() & .tail()
 print(reviews.head())
 
+### INDEX IG
+
+# Access properties
+print(reviews.project_id.head()) # or reviews["project_id"]
+
+# iloc - Index location (loc/iloc: row/column)
+print(reviews.iloc[0])
+
+# only columns
+print(reviews.iloc[:, 0])
+#reviews.iloc[1:3, 0] || reviews.iloc[[1, 3, 2], 0]
+
+# reviews.iloc[-5:] starts at end
+
+# Loc
+print(reviews.loc[0, 'project_id']) # print first entry in reviews
+
+# this project loc is better cayse we have meaninflful indices
+print(reviews.loc[:, ["log_hours", "project_span_days"]])
+
+print(reviews.set_index("num_commits"))
