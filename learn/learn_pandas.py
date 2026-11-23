@@ -39,3 +39,10 @@ print(reviews.loc[0, 'project_id']) # print first entry in reviews
 print(reviews.loc[:, ["log_hours", "project_span_days"]])
 
 print(reviews.set_index("num_commits"))
+
+# Bool statement
+print(reviews.commit_cadence == 'daily') # searching: reviews.loc[reviews.country == 'Italy']
+
+# & = and, | = or
+
+# .isin() lets you use a list for loc  | .notnull()
