@@ -3,13 +3,17 @@ import pandas as pd
 
 # Table
 df = pd.DataFrame({'Bob': ['I liked it.', 'It was awful.'], 'Sue': ['Pretty good.', 'Bland.']}, index=['Product A', 'Product B'])
-print(df)
+print(f"{df}\n")
 
 # Series = table
 series = pd.Series([1, 2, 3, 4, 5])
 
 # Read csvs
-reviews = pd.read_csv("../train.csv")
+reviews = pd.read_csv("train.csv")
 
-# Size/largeness
-reviews.shape
+# Size/largeness: records:columsn
+print(reviews.shape)
+
+# .head() & .tail()
+print(reviews.head())
+
